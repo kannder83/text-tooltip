@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 65.2%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  display: inline-block;
+  cursor: default;
+  border-bottom: 0.1rem solid white;
+}
+
+.container span {
+  position: absolute;
+  width: 12rem;
+  bottom: 125%;
+  left: 50%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin-left: -6rem;
+  border-radius: 0.6rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.container span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.5rem;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.container:hover span {
+  visibility: visible;
+  opacity: 1;
+}
